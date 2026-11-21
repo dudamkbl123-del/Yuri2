@@ -1,132 +1,145 @@
 
+/* CONFIGURAÇÕES GERAIS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: linear-gradient(135deg, #ffe4ec, #fff0f5, #fce4ec);
-    font-family: 'Georgia', serif;
+    font-family: Georgia, serif;
     min-height: 100vh;
-
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-
+    justify-content: flex-start;
     text-align: center;
-    padding: 30px;
+    padding: 45px 20px;
     color: #754354;
 }
 
-
+/* TÍTULO PRINCIPAL */
 h1 {
     font-size: 48px;
     color: #c05278;
-    margin-bottom: 35px;
+    margin: 30px 0 35px;
     letter-spacing: 2px;
 }
 
-
+/* CARTÕES DE TEXTO */
 h4 {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.75);
     padding: 20px 25px;
-    margin: 10px;
+    margin: 9px 0;
     max-width: 450px;
     width: 100%;
-
-    border-radius: 15px;
+    border-radius: 16px;
     box-shadow: 0 4px 12px rgba(192, 82, 120, 0.12);
-
     font-size: 17px;
     font-weight: normal;
     line-height: 1.7;
-}
-
-
-h2 {
-    color: #c05278;
-    margin: 35px 0 20px;
-    font-size: 25px;
-}
-
-
-.galeria {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    max-width: 900px;
-}
-
-.galeria img {
-    width: 220px;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(192, 82, 120, 0.2);
+    color: #754354;
     transition: 0.3s;
 }
 
-.galeria img:hover {
-    transform: scale(1.05);
+/* EFEITO DOS CARTÕES */
+h4:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 16px rgba(192, 82, 120, 0.2);
 }
 
+/* TÍTULOS DAS SEÇÕES */
+h2 {
+    color: #c05278;
+    font-size: 27px;
+    margin: 35px 0 20px;
+}
 
-.video {
-    max-width: 500px;
+/* GALERIA DE FOTOS */
+.galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
     width: 100%;
-    margin-bottom: 40px;
+    max-width: 950px;
+    padding: 10px;
+}
+
+.galeria img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(192, 82, 120, 0.18);
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.04);
+}
+
+/* VÍDEO */
+.video {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto 40px;
 }
 
 .video video {
     width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(192, 82, 120, 0.2);
+    display: block;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(192, 82, 120, 0.18);
 }
 
-/* Ajustes para celulares */
+/* AJUSTES PARA CELULAR */
 @media (max-width: 600px) {
 
     body {
-        padding: 20px 15px;
+        padding: 25px 15px;
     }
 
     h1 {
-        font-size: 36px;
-        margin-bottom: 25px;
+        font-size: 38px;
+        margin: 25px 0 30px;
     }
 
     h4 {
         font-size: 15px;
-        padding: 16px;
+        padding: 17px 18px;
+        max-width: 100%;
         margin: 8px 0;
-        width: 100%;
     }
 
     h2 {
-        font-size: 22px;
-        margin-top: 30px;
+        font-size: 23px;
+        margin: 30px 0 18px;
     }
 
     .galeria {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 18px;
-        width: 100%;
+        gap: 20px;
+        padding: 5px;
     }
 
     .galeria img {
         width: 100%;
         max-width: 320px;
         height: 300px;
-        object-fit: cover;
     }
 
     .video {
-        width: 100%;
-        max-width: 350px;
+        max-width: 100%;
+        margin: 10px auto 30px;
     }
 }
